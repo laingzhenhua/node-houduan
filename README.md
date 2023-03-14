@@ -31,13 +31,18 @@ the following commands from the project root:
 ```shell
 npm install
 cd server/
-node index.js
+node auto.js
 ```
 
 This will make the backend server available at your domain on port 8080.
 If you want to have it automatically recover on crash or server restart,
 you could use [pm2](https://pm2.keymetrics.io/) with the provided `ecosystem.config.js`
-
+```shell
+npm install
+cd server/
+npm i -g pm2
+pm2 start auto.js
+```
 ### Allowing access from different domains
 
 Currently the backend server only accepts connections coming from
